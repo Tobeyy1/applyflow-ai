@@ -21,7 +21,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "https://applyflow-ai-ten.vercel.app",
-        "https://applyflow-ai-qi50.onrender.com/"
+        "https://applyflow-ai-qi50.onrender.com"
     ],
     allow_credentials=True,
     allow_methods=["*"],
