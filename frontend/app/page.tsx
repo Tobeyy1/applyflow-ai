@@ -11,13 +11,14 @@ export default function Home() {
 	const [isLoading, setIsLoading] = useState(false);
 	const [data, setData] = useState(null);
 
+	const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 	async function handleSubmit(jobDescription: string, resume: File) {
 		setIsLoading(true);
 		const formData = new FormData();
 		formData.append("job_description", jobDescription);
 		formData.append("resume", resume);
 
-		const res = await fetch("http://localhost:8000/analyze", {
+		const res = await fetch(`${API_URL}/analyze`, {
 			method: "POST",
 			body: formData,
 		});

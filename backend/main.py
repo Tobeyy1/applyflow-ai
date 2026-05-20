@@ -20,7 +20,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://your-app.vercel.app"  # Replace with your Vercel URL at deploy time
+        "https://applyflow-ai-ten.vercel.app",
+        "https://applyflow-ai-qi50.onrender.com/"
     ],
     allow_credentials=True,
     allow_methods=["*"],
